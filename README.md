@@ -6,7 +6,19 @@
 
 Check SAM.gov UEI and CAGE code formats and look up a clearly labeled sample NAICS size table. Same input, same answer, no API, no cost, works offline.
 
-The checker ships in a pull request. Format checks only prove shape, not that an ID is assigned or active. The NAICS table is sample data, not official SBA standards.
+Format checks only prove shape, not that an ID is assigned or active. The NAICS table is bundled sample data, not official SBA size standards.
+
+```sh
+python gov_contracting.py uei J6H4FB3N5YK4
+python gov_contracting.py cage 0YWL3
+python gov_contracting.py cage A1B2C --ncage
+python gov_contracting.py naics 541511 --receipts 5000000
+python gov_contracting.py check --uei J6H4FB3N5YK4 --cage 0YWL3 --naics 541511
+```
+
+UEI rules used here follow GSA Unique Entity ID stakeholder materials (November 2021): 12 alphanumeric characters, no letters I or O, and the first character is not zero. CAGE rules follow DLA's published shape: 5 alphanumeric characters excluding I and O, with a digit in the fifth position for a US CAGE (examples such as 0YWL3). `--ncage` relaxes the last-character rule for the broader NATO NCAGE shape. None of this queries SAM.gov or cage.dla.mil.
+
+The file `data/SAMPLE_NAICS_SIZE_STANDARDS.csv` is labeled as sample data in the file itself and in every lookup. Do not use it for eligibility, filing, or certification. Check official SBA size standards if you need a real decision.
 
 ## Run it
 
