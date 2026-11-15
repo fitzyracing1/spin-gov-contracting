@@ -1,0 +1,15 @@
+# SAMPLE DATA — NOT official SBA size standards.
+# Not for eligibility, filing, certification, or any official decision.
+# Replace this file with current official data from sba.gov if you need real lookups.
+# Check: https://www.sba.gov/document/support-table-size-standards
+naics,title,size_standard,unit
+541511,Sample custom computer programming,10000000,receipts_usd
+541512,Sample computer systems design,10000000,receipts_usd
+541611,Sample administrative management consulting,8000000,receipts_usd
+236220,Sample commercial building construction,150,employees
+237310,Sample highway street and bridge construction,200,employees
+332710,Sample machine shops,500,employees
+423430,Sample computer wholesaling,250,employees
+561720,Sample janitorial services,5000000,receipts_usd
+621111,Sample offices of physicians,8000000,receipts_usd
+722511,Sample full-service restaurants,8000000,receipts_usd
